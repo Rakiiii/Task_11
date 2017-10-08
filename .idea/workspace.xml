@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="Example_10" targetName="Example_10" />
+      <config projectName="Example_12" targetName="Example_12" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50fb6ad-9a05-47a8-ac1a-71b8759add94" name="Default" comment="" />
+    <list default="true" id="fd8a8360-2ace-4ade-96c3-92823a9fb1e2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,10 +35,10 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-377">
-              <caret line="81" column="58" lean-forward="false" selection-start-line="81" selection-start-column="58" selection-end-line="81" selection-end-column="58" />
+            <state relative-caret-position="697">
+              <caret line="107" column="25" lean-forward="true" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,11 +47,9 @@
       <file leaf-file-name="Include_and_constants.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Include_and_constants.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="e#124#142#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="444">
+              <caret line="112" column="11" lean-forward="true" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,8 +59,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Include_and_constants.h" />
         <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/Include_and_constants.h" />
       </list>
     </option>
   </component>
@@ -93,22 +91,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Example_10" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="Example_10" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Example_10" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -122,16 +110,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Build All">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Example_10" TARGET_NAME="Example_10" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Example_10" RUN_TARGET_NAME="Example_10">
+  <component name="RunManager" selected="Application.Example_12">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
-    <configuration name="Example_10" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Example_10" TARGET_NAME="Example_10" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Example_10" RUN_TARGET_NAME="Example_10">
+    <configuration name="Example_12" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Example_12" TARGET_NAME="Example_12" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Example_12" RUN_TARGET_NAME="Example_12">
       <envs />
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Example_10" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Example_12" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -139,29 +127,29 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e50fb6ad-9a05-47a8-ac1a-71b8759add94" name="Default" comment="" />
-      <created>1507046857164</created>
+      <changelist id="fd8a8360-2ace-4ade-96c3-92823a9fb1e2" name="Default" comment="" />
+      <created>1507146830934</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1507046857164</updated>
-      <workItem from="1507046859214" duration="8870000" />
-      <workItem from="1507095442281" duration="21000" />
-      <workItem from="1507098081808" duration="55000" />
-      <workItem from="1507152360638" duration="944000" />
+      <updated>1507146830934</updated>
+      <workItem from="1507146832084" duration="3310000" />
+      <workItem from="1507150490028" duration="1867000" />
+      <workItem from="1507172861992" duration="9000" />
+      <workItem from="1507227651707" duration="47000" />
+      <workItem from="1507487070538" duration="1838000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9890000" />
+    <option name="totallyTimeSpent" value="7071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -191,38 +179,11 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="Machines [ 0 ].Coefficient" language="ObjectiveC" />
-        <watch expression="Machines [ 0 ].RepairTime" language="ObjectiveC" />
-        <watch expression="Machines [ 0 ].LooseOutOfStay" language="ObjectiveC" />
-        <watch expression="Machines[0].Number" language="ObjectiveC" />
-        <watch expression="Machines[1].Coefficient" language="ObjectiveC" />
-        <watch expression="Machines[1].RepairTime" language="ObjectiveC" />
-        <watch expression="Machines[1].LooseOutOfStay" language="ObjectiveC" />
-        <watch expression="Machines[1].Number" language="ObjectiveC" />
-        <watch expression="Machines[2].Coefficient" language="ObjectiveC" />
-        <watch expression="Machines[2].RepairTime" language="ObjectiveC" />
-        <watch expression="Machines[2].LooseOutOfStay" language="ObjectiveC" />
-        <watch expression="Machines[2].Number" language="ObjectiveC" />
-        <watch expression="Machines[3].Coefficient" language="ObjectiveC" />
-        <watch expression="Machines[3].RepairTime" language="ObjectiveC" />
-        <watch expression="Machines[3].LooseOutOfStay" language="ObjectiveC" />
-        <watch expression="Machines[3].Number" language="ObjectiveC" />
-        <watch expression="Machines[4].Coefficient" language="ObjectiveC" />
-        <watch expression="Machines[4].RepairTime" language="ObjectiveC" />
-        <watch expression="Machines[4].LooseOutOfStay" language="ObjectiveC" />
-        <watch expression="Machines[4].Number" language="ObjectiveC" />
-        <watch expression="Arr" />
-        <watch expression="Arr[0]" language="ObjectiveC" />
-        <watch expression="i" language="ObjectiveC" />
-        <watch expression="j" language="ObjectiveC" />
-        <watch expression="Arr[1]" language="ObjectiveC" />
-        <watch expression="Arr[2]" language="ObjectiveC" />
-        <watch expression="Arr[3]" language="ObjectiveC" />
-        <watch expression="Arr[4]" language="ObjectiveC" />
-        <watch expression="((struct Characteristic)(Arr[0]))" />
-        <watch expression="((int)(j))" />
-        <watch expression="((int)(((int)(j))))" />
-        <watch expression="Machines[1].LooseOutOfStay" language="ObjectiveC" />
+        <watch expression="Order[0]" language="ObjectiveC" />
+        <watch expression="Order[1]" language="ObjectiveC" />
+        <watch expression="Order[2]" language="ObjectiveC" />
+        <watch expression="Order[3]" language="ObjectiveC" />
+        <watch expression="Raw[3].Check" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
@@ -237,20 +198,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Include_and_constants.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#124#142#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="782">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="1173">
+          <caret line="69" column="30" lean-forward="false" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -265,20 +224,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Include_and_constants.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#124#142#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="782">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="1173">
+          <caret line="69" column="30" lean-forward="false" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -293,20 +250,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Include_and_constants.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#124#142#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="782">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="1173">
+          <caret line="69" column="30" lean-forward="false" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="64" lean-forward="false" selection-start-line="50" selection-start-column="64" selection-end-line="50" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -321,20 +294,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Include_and_constants.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#124#142#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="444">
+          <caret line="112" column="11" lean-forward="true" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="81" column="58" lean-forward="false" selection-start-line="81" selection-start-column="58" selection-end-line="81" selection-end-column="58" />
+        <state relative-caret-position="697">
+          <caret line="107" column="25" lean-forward="true" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>

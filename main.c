@@ -1,130 +1,152 @@
-#include <windef.h>
 #include "Include_and_constants.h"
+#include <windef.h>
 
-
-struct Characteristic
+struct Machines //делаем структуру для храненияданных о каждом объекте
 {
-    int RepairTime;
-    int LooseOutOfStay;
-    int Number;
-    float Coefficient;
-};
+    int First ; //время обработки на первой машины
+    int Second ; //время обработки на второй машине
+    int Number ; //номер детали
+    int Check ; //флаг
+} ;
 
-
-/*void QSort(struct Characteristic* Arr , int N)//классический алгоритм быстрой сортировки
+void FindOptimalRaw()
 {
-    int i = 0 , j = N - 1 , temp = 0 ;//два счетчика,переменнная для опорного элемента
-    float p = 0.0 , tempf = 0;
-    p = Arr[ N >> 1].Coefficient ;
-    do
+    int Check = 0 , Min = 0 , Num = 0 ; //инициализируем : временный флаг , временный номер , мин занчение
+    printf( "Set amount of items_\n" ) ;
+    int AmountOfMachines = In() ; //получаем значение деталей
+    int *Order = ( int* )malloc( AmountOfMachines * sizeof( int ) ) ; //выделяем время под массив для порядка
+    for( int i = 0 ; i < AmountOfMachines ; i ++ )
+        Order[ i ] = 0 ; //обнуляем массив для хранения порядка
+    struct Machines *Raw = ( struct Machines* )malloc( AmountOfMachines * sizeof( struct Machines ) ) ;
+    //выделяем память под массив для хранения информации о деталях
+    for( int i = 0 ; i < AmountOfMachines ; i ++ ) //читаем инфу о деталях
     {
-        while( Arr[ i ].Coefficient < p) i++;
-        while( Arr[ j ].Coefficient > p) j--;
-        if(i <= j)
-        {
-            tempf = Arr[ i ].Coefficient;
-            Arr[ i ].Coefficient = Arr[ j ].Coefficient;
-            Arr[ j ].Coefficient = tempf;
-            temp = Arr[ i ].RepairTime;
-            Arr[ i ].RepairTime = Arr[ j ].RepairTime;
-            Arr[ j ].RepairTime = temp ;
-            temp = Arr[ i ].LooseOutOfStay;
-            Arr[ i ].LooseOutOfStay = Arr[ j ].LooseOutOfStay;
-            Arr[ j ].LooseOutOfStay = temp;
-            temp = Arr[ i ].Number;
-            Arr[ i ].Number = Arr[ j ].Number;
-            Arr[ j ].Number = temp;
-            i++;j--;
-        }
-    }while(i <= j);
-    if( j > 0 )QSort( Arr, j);
-    if( N > i )QSort(Arr+i , N -i);
-}
-*/
-
-int OptimalRaw()
-{
-    system("cls");
-    printf("Set amount of machines_\n");
-    int AmountOfMachines = In() , TimeForAllMachines = 0 , j = 0  , temp = 0 ;
-    double TotalLoseOutOfStay = 0.0;
-    struct Characteristic *Machines = (struct Characteristic*)malloc( AmountOfMachines * sizeof( struct Characteristic ) );
-    for( int i = 0 ; i < AmountOfMachines ; i++ )
-    {
-        printf("Set lose out of stay for %d-th machine\n" , i + 1);
-        Machines[ i ].LooseOutOfStay = In();
-        printf("Set repair time for %d-th machine\n" , i + 1);
-        Machines[ i ].RepairTime = In();
-        Machines[ i ].Coefficient = Machines[ i ].LooseOutOfStay / Machines[ i ].RepairTime;
-        Machines[ i ].Number = i + 1 ;
+        printf( "Add working time of %d item on the first machine_\n" , i + 1 ) ;
+        Raw[ i ].First = In() ; //читаем время обработки  детали на первом станке
+        printf( "Add working time of %d item on the second machine_\n" , i + 1 ) ;
+        Raw[ i ].Second = In() ; //читаем время обработки  детали на втором станке
+        Raw[ i ].Number = i + 1 ; //запоминаем номер
+        Raw[ i ].Check = 1 ; //превращяем флаг в еденицу
     }
-    //QSort(Machines , AmountOfMachines);
-    /*float tempf = 0;
-    for(int i = 1 ; i < AmountOfMachines ; i++ )
+    for( int i = 0 ; i < AmountOfMachines ; i ++ )
     {
-        if(Machines[ i - 1 ].Coefficient < Machines[ i ].Coefficient)
-        {
-            tempf = Machines[ i ].Coefficient;
-            Machines[ i ].Coefficient = Machines[ j ].Coefficient;
-            Machines[ j ].Coefficient = tempf;
-            temp = Machines[ i ].RepairTime;
-            Machines[ i ].RepairTime = Machines[ j ].RepairTime;
-            Machines[ j ].RepairTime = temp ;
-            temp = Machines[ i ].LooseOutOfStay;
-            Machines[ i ].LooseOutOfStay = Machines[ j ].LooseOutOfStay;
-            Machines[ j ].LooseOutOfStay = temp;
-            temp = Machines[ i ].Number;
-            Machines[ i ].Number = Machines[ j ].Number;
-            Machines[ j ].Number = temp;
-            i++;j--;
-        }
-    }*/
-    printf("You should repair machines in this order:\n");
-    for( int i = 0 ; i < AmountOfMachines ; i++ )
-    {
-        int  Max = 0 , Num = 0;
+        Min = Exponentiation( 10 , 29 ) ; //делаем мин значение бблизкое к масималюному
+        //Exponentiation описан в include and constants
         for( int j = 0 ; j < AmountOfMachines ; j ++ )
         {
-            if( Machines[ j ].Coefficient > Max)
+            if( ( Raw[ j ].First < Min || Raw[ j ].Second < Min ) && Raw[ j ].Check == 1 ) //ищем минимальное значение среди первого и второго с флагом в еденицу
             {
-                Max = Machines[ j ].Coefficient;
-                Num = Machines[ j ].Number;
+                if( Raw[ j ].First <= Raw[ j ].Second ) //если первое меньше второго то ставим его в начало
+                {
+                    Min = Raw[ j ].First ;
+                    Num = Raw[ j ].Number ;
+                    Check = 1 ; //если флаг 1 то ставим в начало
+                }
+                else
+                {
+                    Min = Raw[ j ].Second ;
+                    Num = Raw[ j ].Number ;
+                    Check = 0 ; //если флаг ноль то ставим в конец
+                }
             }
         }
-        Machines [ Num - 1 ].Coefficient = 0;
-        printf("%d -th machine\n" , Num );
-        TimeForAllMachines = TimeForAllMachines + Machines [ i ].RepairTime;
-        TotalLoseOutOfStay = TotalLoseOutOfStay + ( Machines [ i ].LooseOutOfStay * TimeForAllMachines );
+        Raw[ Num - 1 ].Check = 0 ;
+        if ( Check > 0 )
+        {
+            for( int k = 0 ; k < AmountOfMachines ; k ++ ) //ищем первое свободное место для номера с начала
+            {
+                if( Order [ k ] == 0 )
+                {
+                    Order[ k ] = Num ;
+                    break ;
+                }
+            }
+        }
+        else
+        {
+            for( int k = AmountOfMachines ; k > 0 ; k -- ) //ищем первое свободное место с конца
+            {
+                if( Order [ k ] == 0 )
+                {
+                    Order[ k ] = Num ;
+                    break ;
+                }
+            }
+        }
     }
-    printf("Total losses is %f \n" , TotalLoseOutOfStay);
-    /*for(int i = 0 ; i < AmountOfMachines ; i++)
+    printf( "The best order is:" ) ; //вывродим порядок
+    for( int i = 0 ; i < AmountOfMachines ; i ++ ) printf( "%d" , Order[ i ] ) ;
+    printf( "\nGant's graphic\n" ) ; //рисуем график ганта
+    int TimeOnFirst = 0 , TimeOnSecond = 0 ;
+    for ( int i = 0 ; i < AmountOfMachines ; i ++ )
     {
-        printf("%d -th machine\n" , Machines[ i ].Number);
-    }*/
-    return 0;
+        for( int j = 0 ; j < Raw[ Order[ i ] - 1 ].First ; j ++ )
+        {
+            printf( "%d" , Order[ i ] ) ;
+        }
+    }
+    printf("\n");
+    while ( Raw[ Order[ 1 ] - 1 ].First > 0 )
+    {
+        printf("-");
+        Raw[ Order[ 1 ] - 1 ].First -- ;
+    }
+    while ( Raw[ Order[ 1 ] - 1 ].Second > 0 )
+    {
+        printf( "%d" , Order[ 1 ] ) ;
+        Raw[ Order[ 1 ] - 1 ].Second -- ;
+    }
+    for( int i = 1 ; i < AmountOfMachines ; i ++ )
+    {
+        while ( Raw[ Order[ i ] - 1 ].First > 0 )
+        {
+            printf( "-" ) ;
+            Raw[ Order[ i ] - 1 ].First -- ;
+        }
+        while ( ( Raw[ Order[ i ] - 1 ].Second - Raw[ Order[ i -1  ] - 1 ].First )  > 0 )
+        {
+            printf( "%d" , Order[ i ] ) ;
+            Raw[ Order[ i ] - 1 ].Second -- ;
+        }
+    }
+    /*int LostTime = 0 ;
+    for( int i = 0 ; i < AmountOfMachines ; i ++ )
+    {
+        printf( "Process%d|" , Order [ i ] ) ;
+        for( int j = 0 ; j < LostTime ; j ++ ) printf( "-" ) ;
+        for( int j = 0 ; j < ( Raw[ Order [ i ] - 1 ].First + Raw[ Order [ i ] - 1 ].Second ) ; j ++ )
+            printf( "%d" , i + 1 ) ;
+        if(i > 0)
+            LostTime = LostTime + Raw[ Order [ i ] - 1 ].First + Raw[ Order[ i - 1 ] - 1 ].Second ;
+        else
+            LostTime = Raw[ 0 ].First ;
+        printf( "\n" ) ;
+    }
+    printf( "\t|" ) ;
+    for( int i = 0 ; i <= LostTime ; i++ )
+        printf( "_" ) ;
+    printf( "\n\tWorking time\n" ) ;*/
 }
 
-
-int main()
+int main() //меню
 {
-    while(TRUE)
+    while (TRUE)
     {
-        system("cls");
-        printf("1.Find optimal raw\n2.Exit");
-        char Choose = getch();
-        switch (Choose)
+        system( "cls" ) ;
+        printf( "1.Find optimal raw\n2.Exit\n" ) ;
+        char Choose = getch() ;
+        switch ( Choose )
         {
             case '1' :
-                OptimalRaw();
-                printf("Press any button to restart the programme_\n");
-                getch();
-                break;
+                system( "cls" ) ;
+                FindOptimalRaw() ;
+                printf( "Press any button to restart the programme_" ) ;
+                getch() ;
+                break ;
             case '2' :
-                return 0;
-            default:
-                break;
-
+                return 0 ;
+            default :
+                break ;
         }
-
     }
 }

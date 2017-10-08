@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\smyrf\CLionProjects\Example_11
+CMAKE_SOURCE_DIR = C:\Users\smyrf\CLionProjects\Example_12
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\smyrf\CLionProjects\Example_11\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\smyrf\CLionProjects\Example_12\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\smyrf\CLionProjects\Example_11\cmake-build-debug\CMakeFiles C:\Users\smyrf\CLionProjects\Example_11\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\smyrf\CLionProjects\Example_12\cmake-build-debug\CMakeFiles C:\Users\smyrf\CLionProjects\Example_12\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\smyrf\CLionProjects\Example_11\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\smyrf\CLionProjects\Example_12\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,17 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Example_10
+# Target rules for targets named Example_12
 
 # Build rule for target.
-Example_10: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 Example_10
-.PHONY : Example_10
+Example_12: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Example_12
+.PHONY : Example_12
 
 # fast build rule for target.
-Example_10/fast:
-	$(MAKE) -f CMakeFiles\Example_10.dir\build.make CMakeFiles/Example_10.dir/build
-.PHONY : Example_10/fast
+Example_12/fast:
+	$(MAKE) -f CMakeFiles\Example_12.dir\build.make CMakeFiles/Example_12.dir/build
+.PHONY : Example_12/fast
 
 main.obj: main.c.obj
 
@@ -128,7 +128,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) -f CMakeFiles\Example_10.dir\build.make CMakeFiles/Example_10.dir/main.c.obj
+	$(MAKE) -f CMakeFiles\Example_12.dir\build.make CMakeFiles/Example_12.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -137,7 +137,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles\Example_10.dir\build.make CMakeFiles/Example_10.dir/main.c.i
+	$(MAKE) -f CMakeFiles\Example_12.dir\build.make CMakeFiles/Example_12.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -146,7 +146,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles\Example_10.dir\build.make CMakeFiles/Example_10.dir/main.c.s
+	$(MAKE) -f CMakeFiles\Example_12.dir\build.make CMakeFiles/Example_12.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -155,7 +155,7 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... Example_10
+	@echo ... Example_12
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... main.obj
